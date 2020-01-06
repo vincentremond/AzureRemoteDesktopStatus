@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   viewBox="0 0 67.733335 67.733333"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="Microsoft_Azure_Logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.1533984"
+     inkscape:cx="232.18037"
+     inkscape:cy="143.16028"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-7"
+     inkscape:window-maximized="1"
+     units="px" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(677.9313,-261.36566)">
+    <path
+       style="fill:#0089d6;fill-opacity:1;stroke-width:0.03504309"
+       d="m -646.36064,316.48209 c 7.89257,-1.39424 14.4114,-2.548 14.48627,-2.56385 l 0.13609,-0.0281 -7.45139,-8.8632 c -4.09824,-4.87474 -7.45135,-8.88206 -7.45135,-8.90515 0,-0.0437 7.69415,-21.23184 7.73741,-21.30721 0.0156,-0.025 5.25059,9.0148 12.69271,21.91359 6.96744,12.07605 12.71177,22.03283 12.76515,22.12613 l 0.0971,0.16948 -23.68108,-0.003 -23.68107,-0.003 14.35016,-2.53498 z m -28.41995,-2.70259 c 0,-0.0125 3.51105,-6.10739 7.80234,-13.54426 l 7.80233,-13.52158 9.09271,-7.6306 c 5.00098,-4.19684 9.10618,-7.63576 9.12263,-7.64203 0.0156,-0.006 -0.0493,0.15918 -0.14607,0.36793 -0.0968,0.20849 -4.53992,9.73851 -9.87341,21.17743 l -9.69732,20.79807 -7.05155,0.009 c -3.87835,0.006 -7.05156,-10e-4 -7.05156,-0.0125 z"
+       id="path21"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsscccccccccscsccccccc" />
+  </g>
+</svg>

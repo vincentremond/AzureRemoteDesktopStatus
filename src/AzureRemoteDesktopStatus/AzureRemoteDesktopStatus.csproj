@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.Azure.Management.Fluent" Version="1.29.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="azureauth.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

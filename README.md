@@ -8,3 +8,9 @@
     az account show
     az ad sp create-for-rbac --sdk-auth | Out-File "azureauth.json"
     dotnet run
+
+## Todo
+
+- Add check for VM up before & after start
+- Check if IP is ok
+- Launch RDP if TCP to 3389 is ok

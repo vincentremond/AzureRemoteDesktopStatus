@@ -1,5 +1,5 @@
-AzureRemoteDesktopStatus/obj/
-AzureRemoteDesktopStatus/bin/
+obj/
+bin/
 .vs/
 .idea/
 azureauth.json

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Sockets;
 using System.Windows.Forms;
 
 namespace AzureRemoteDesktopStatus
@@ -46,6 +47,34 @@ namespace AzureRemoteDesktopStatus
             catch (Exception exception)
             {
                 MessageBox.Show(exception.ToString());
+            }
+        }
+
+        private async void testButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Log($"Trying to connect to {Constants.HostName}:{Constants.RdpPort}");
+                var result = TestTcpConnection(Constants.HostName, Constants.RdpPort);
+                Log(result ? "Success" : "Failure");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString());
+            }
+        }
+
+        private static bool TestTcpConnection(string hostName, int rdpPort)
+        {
+            try
+            {
+                using var tcpClient = new TcpClient();
+                tcpClient.Connect(hostName, rdpPort);
+                return tcpClient.Connected;
+            }
+            catch (Exception e)
+            {
+                return false;
             }
         }
 

@@ -18,8 +18,7 @@ namespace AzureRemoteDesktopStatus
         private static async Task<IVirtualMachine> GetVirtualMachine()
         {
             var credentials = SdkContext.AzureCredentialsFactory
-                .FromFile(
-                    @"C:\Users\vincent\source\repos\AzureRemoteDesktopStatus\AzureRemoteDesktopStatus\azureauth.json");
+                .FromFile(Constants.CredentialFile);
 
             var azure = Azure
                 .Configure()
@@ -27,8 +26,8 @@ namespace AzureRemoteDesktopStatus
                 .Authenticate(credentials)
                 .WithDefaultSubscription();
 
-            var vm = await azure.VirtualMachines.GetByResourceGroupAsync("PinicolaWorkstation",
-                "PCW"); // TODO remove hard coded part
+            var vm = await azure.VirtualMachines.GetByResourceGroupAsync(Constants.ResourceGroupName,
+                Constants.VirtualMachineName);
             return vm;
         }
 

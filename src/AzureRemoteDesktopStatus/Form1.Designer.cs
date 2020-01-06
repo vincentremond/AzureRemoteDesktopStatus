@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources =
-                new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.startButton = new System.Windows.Forms.Button();
             this.stopButton = new System.Windows.Forms.Button();
             this.refreshButton = new System.Windows.Forms.Button();
             this.logTextBox = new System.Windows.Forms.TextBox();
+            this.testButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startButton
@@ -66,13 +66,21 @@
             this.refreshButton.UseVisualStyleBackColor = true;
             this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
             // 
+            // testButton
+            // 
+            this.testButton.Location = new System.Drawing.Point(297, 12);
+            this.testButton.Name = "testButton";
+            this.testButton.Size = new System.Drawing.Size(89, 24);
+            this.testButton.TabIndex = 2;
+            this.testButton.Text = "Test RDP";
+            this.testButton.UseVisualStyleBackColor = true;
+            this.testButton.Click += new System.EventHandler(this.testButton_Click);
+            // 
             // logTextBox
             // 
             this.logTextBox.Anchor =
-                ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top |
-                                                         System.Windows.Forms.AnchorStyles.Bottom) |
-                                                        System.Windows.Forms.AnchorStyles.Left) |
-                                                       System.Windows.Forms.AnchorStyles.Right)));
+                ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) |
+                                                        System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.logTextBox.Location = new System.Drawing.Point(12, 42);
             this.logTextBox.Multiline = true;
             this.logTextBox.Name = "logTextBox";
@@ -85,6 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 285);
             this.Controls.Add(this.logTextBox);
+            this.Controls.Add(this.testButton);
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.stopButton);
             this.Controls.Add(this.startButton);
@@ -100,6 +109,7 @@
         private System.Windows.Forms.Button stopButton;
         private System.Windows.Forms.Button refreshButton;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Button testButton;
         private System.Windows.Forms.TextBox logTextBox;
     }
 }

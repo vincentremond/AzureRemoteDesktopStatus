@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net.Sockets;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AzureRemoteDesktopStatus
@@ -17,6 +19,15 @@ namespace AzureRemoteDesktopStatus
             {
                 await AzureHelper.Start();
                 Log("Start requested");
+                var connectionSuccessful = false;
+                do
+                {
+                    Log($"Trying to connect to {Constants.HostName}:{Constants.RdpPort}");
+                    connectionSuccessful = await TestTcpConnection(Constants.HostName, Constants.RdpPort);
+                    Log(connectionSuccessful ? "Success" : "Failure");
+                } while (connectionSuccessful);
+
+                Process.Start("mstsc.exe");
             }
             catch (Exception exception)
             {
@@ -55,7 +66,7 @@ namespace AzureRemoteDesktopStatus
             try
             {
                 Log($"Trying to connect to {Constants.HostName}:{Constants.RdpPort}");
-                var result = TestTcpConnection(Constants.HostName, Constants.RdpPort);
+                var result = await TestTcpConnection(Constants.HostName, Constants.RdpPort);
                 Log(result ? "Success" : "Failure");
             }
             catch (Exception exception)
@@ -64,15 +75,15 @@ namespace AzureRemoteDesktopStatus
             }
         }
 
-        private static bool TestTcpConnection(string hostName, int rdpPort)
+        private static async Task<bool> TestTcpConnection(string hostName, int rdpPort)
         {
             try
             {
                 using var tcpClient = new TcpClient();
-                tcpClient.Connect(hostName, rdpPort);
+                await tcpClient.ConnectAsync(hostName, rdpPort);
                 return tcpClient.Connected;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }
